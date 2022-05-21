@@ -16,7 +16,6 @@
 
 ### Association
 - has_many :items
-- has_one  :credit_cards
 - has_one  :address
 
 ## items テーブル
@@ -31,52 +30,8 @@
 | shipping_area   | integer    | null: false                    |
 | preparation_day | integer    | null: false                    |
 | price           | integer    | null: false                    |
-| user            | references | null: false, foreign_key: true |
+| seller          | references | null: false, foreign_key: true |
+| buyer           | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :users
-- belongs_to :categories
-- belongs_to :item_condition
-- belongs_to :postage_payer
-- belongs_to :shipping_area
-- belongs_to :preparation_day
-
-## categories
-| Column     | Type   | Options     |
-| ---------- | ------ | ------------|
-| name       | string | null: false |
-
-### Association
-- has_many   :items
-
-## item_conditions
-| Column         | Type   | Options     |
-| -------------- | ------ | ----------- |
-| item_condition | string | null: false |
-
-### Association
-- has_many   :items
-
-## postage_payers
-| Column        | Type   | Options     |
-| ------------- | ------ | ----------- |
-| postage_payer | string | null: false |
-
-### Association
-- has_many   :items
-
-## shipping_areas
-| Column         | Type   | Options     |
-| -------------- | ------ | ----------- |
-| shipping_area  | string | null: false |
-
-### Association
-- has_many   :items
-
-## preparation_days
-| Column          | Type   | Options     |
-| --------------- | ------ | ----------- |
-| preparation_day | string | null: false |
-
-### Association
-- has_many   :items
