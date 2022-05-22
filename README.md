@@ -1,18 +1,18 @@
 # テーブル設計
 
 ## users テーブル
-| Column             | Type   | Options     |
-| ------------------ | ------ | ----------- |
-| nickname           | string | null: false |
-| email              | string | null: false |
-| password           | string | null: false |
-| family_name        | string | null: false |
-| first_name         | string | null: false |
-| family_name_kana   | string | null: false |
-| first_name_kana    | string | null: false |
-| berth_yy           | date   | null: false |
-| berth_mm           | date   | null: false |
-| berth_dd           | date   | null: false |
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| nickname           | string | null: false               |
+| email              | string | null: false, unique: true |
+| password           | string | null: false               |
+| family_name        | string | null: false               |
+| first_name         | string | null: false               |
+| family_name_kana   | string | null: false               |
+| first_name_kana    | string | null: false               |
+| berth_yy           | date   | null: false               |
+| berth_mm           | date   | null: false               |
+| berth_dd           | date   | null: false               |
 
 ### Association
 - has_many :items
