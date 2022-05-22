@@ -38,6 +38,7 @@
 | Column          | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
 | user_id         | references | null: false, foreign_key: true |
+| trading_id      | references | null: false, foreign_key: true |
 | postal_code     | string     | null: false                    |
 | shipping_area   | integer    | null: false                    |
 | city            | string     | null: false                    |
