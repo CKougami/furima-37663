@@ -19,7 +19,6 @@
 ## items テーブル
 | Column          | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
-| item_image      | string     | null: false                    |
 | item_name       | string     | null: false                    |
 | introduction    | text       | null: false                    |
 | category        | string     | null: false                    |
