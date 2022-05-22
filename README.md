@@ -16,7 +16,6 @@
 
 ### Association
 - has_many :items
-- has_one  :shipping_addresses
 - has_many :trading_dates
 
 ## items テーブル
