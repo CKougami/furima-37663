@@ -33,7 +33,7 @@
 - belongs_to :user
 - belongs_to :trading_date
 
-## shipping_address テーブル
+## shipping_addresses テーブル
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
 | trading_date     | references | null: false, foreign_key: true |
@@ -55,4 +55,4 @@
 | item_id         | references | null: false, foreign_key: true |
 
 ### Association
-- belong_to  :shipping_address
+- belong_to  :shipping_addresses
