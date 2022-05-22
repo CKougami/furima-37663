@@ -36,7 +36,7 @@
 ## shipping_address テーブル
 | Column          | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
-| user_id         | references | null: false, foreign_key: true |
+| user            | references | null: false, foreign_key: true |
 | trading_id      | references | null: false, foreign_key: true |
 | postal_code     | string     | null: false                    |
 | shipping_area   | integer    | null: false                    |
@@ -53,10 +53,10 @@
 ## trading_dates テーブル
 | Column          | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
-| user_id         | references | null: false, foreign_key: true |
+| user            | references | null: false, foreign_key: true |
 | item_id         | references | null: false, foreign_key: true |
-
 
 ### Association
 - belongs_to :user
 - has_many   :items
+- belong_to  :shipping_address
