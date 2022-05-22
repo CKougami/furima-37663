@@ -45,7 +45,6 @@
 | tel              | string     | null: false                    |
 
 ### Association
-- has_many   :items
 - belongs_to :trading_date
 
 ## trading_dates テーブル
