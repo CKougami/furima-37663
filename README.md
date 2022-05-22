@@ -45,7 +45,6 @@
 | tel              | string     | null: false                    |
 
 ### Association
-- belongs_to :user
 - has_many   :items
 - has_many   :trading_date
 
