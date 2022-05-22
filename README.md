@@ -56,6 +56,4 @@
 | item_id         | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :user
-- has_many   :items
 - belong_to  :shipping_address
