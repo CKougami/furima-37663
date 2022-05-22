@@ -56,4 +56,4 @@
 ### Association
 - belongs_to  :items
 - belongs_to  :users
-- has_one     :shipping_addresses
+- has_one     :shipping_address
