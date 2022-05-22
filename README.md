@@ -46,7 +46,7 @@
 
 ### Association
 - has_many   :items
-- has_many   :trading_date
+- belongs_to :trading_date
 
 ## trading_dates テーブル
 | Column          | Type       | Options                        |
