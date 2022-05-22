@@ -31,7 +31,6 @@
 
 ### Association
 - belongs_to :user
-- belongs_to :shipping_address
 - belongs_to :trading_date
 
 ## shipping_address テーブル
