@@ -54,5 +54,6 @@
 | item            | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to  :shipping_addresses
 - belongs_to  :items
+- belongs_to  :users
+- has_one     :shipping_addresses
