@@ -17,6 +17,8 @@ class User < ApplicationRecord
   end
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
   validates :password, format: { with: VALID_PASSWORD_REGEX, message: 'は半角英数を両方含む必要があります' }
+  validates :password, confirmation: true
+  validates :password_confirmation, presence: true 
 
   has_many :items
   has_many :trading_dates
