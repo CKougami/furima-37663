@@ -1,13 +1,13 @@
 FactoryBot.define do
   factory :item do
-    item_name           {'商品名'}
-    introduction        {'商品説明'}
-    category_id         {'2'}
-    item_condition_id   {'2'}
-    postage_payer_id    {'2'}
-    shipping_area_id    {'2'}
-    preparation_day_id  {'2'}
-    price               {'10000'}
+    item_name           { '商品名' }
+    introduction        { '商品説明' }
+    category_id         { '2' }
+    item_condition_id   { '2' }
+    postage_payer_id    { '2' }
+    shipping_area_id    { '2' }
+    preparation_day_id  { '2' }
+    price               { '10000' }
 
     association :user   # userとitemを紐づける
 
