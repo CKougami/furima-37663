@@ -14,7 +14,7 @@
 
 ### Association
 - has_many :items
-- has_many :trading_dates
+- has_many :purchases
 
 ## items テーブル
 | Column             | Type       | Options                        |
@@ -31,7 +31,7 @@
 
 ### Association
 - belongs_to :user
-- has_one :trading_date
+- has_one :purchase
 
 ## shipping_addresses テーブル
 | Column           | Type       | Options                        |
@@ -45,9 +45,9 @@
 | tel              | string     | null: false                    |
 
 ### Association
-- belongs_to :trading_date
+- belongs_to :purchase
 
-## trading_dates テーブル
+## purchases テーブル
 | Column          | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
 | user            | references | null: false, foreign_key: true |

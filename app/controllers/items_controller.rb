@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
   def index
+    @items = Item.all.order(created_at: :desc)    
+    # 左上から、出品された日時が新しい順に表示
   end
 
   def new
@@ -12,7 +14,8 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to root_path
     else
-      render :new             # 保存できなければnewアクションへ戻る
+      render :new             
+      # 保存できなければnewアクションへ戻る
     end
   end
 
