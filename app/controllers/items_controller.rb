@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:index, :show]   # ログインユーザー以外も可能なアクション
+  before_action :set_item, only: [:show]
+
   def index
     @items = Item.all.order(created_at: :desc)
     # 左上から、出品された日時が新しい順に表示
@@ -17,6 +19,9 @@ class ItemsController < ApplicationController
       render :new
       # 保存できなければnewアクションへ戻る
     end
+
+    def show
+    end
   end
 
   private
@@ -28,5 +33,9 @@ class ItemsController < ApplicationController
     ).merge(user_id: current_user.id)
     # カラムにはないが、imageを添付するので必要。
     # ユーザーIDはdeviseで使えるmergeメソッドで紐づける。
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
   end
 end
