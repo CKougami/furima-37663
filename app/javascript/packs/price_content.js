@@ -11,3 +11,5 @@ window.addEventListener('load', function(){
     profit.innerHTML = (inputValue - Math.floor(inputValue/10)).toLocaleString(); 
   });
 });
+
+// .toLocaleString()  金額をカンマで区切る
