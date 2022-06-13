@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]   # ログインユーザー以外も可能なアクション
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :sold_edit, only: :edit
 
   def index
     @items = Item.all.order(created_at: :desc)
@@ -53,5 +54,10 @@ class ItemsController < ApplicationController
 
   def set_item
     @item = Item.find(params[:id])
+  end
+
+  # 売却済ならトップページへ遷移
+  def sold_edit
+    redirect_to root_path if @item.purchase.present?
   end
 end
